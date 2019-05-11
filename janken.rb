@@ -5,8 +5,10 @@ class Player
     puts "0:グー"
     puts "1:チョキ"
     puts "2:パー"
-    hand_choice = gets.to_f
-    return hand_choice if hand_choice === 0 || hand_choice === 1 ||  hand_choice === 2
+    hand_choice = gets.chomp
+    if hand_choice === "0" || hand_choice === "1" ||  hand_choice === "2"
+      return hand_choice.to_i 
+    end
     puts ""
     puts "0〜2の数字を入力してください。"
     hand()
